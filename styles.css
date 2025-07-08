@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  
+  body {
+    height: 100vh;
+    background: linear-gradient(135deg, #732487, #823594);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+  }
+  
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  
+  #genio {
+    height: 400px;
+  }
+  
+  
+  .pregunta-area {
+    flex: 1;
+    max-width: 700px;
+  }
+  
+  
+  h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  
+  .botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  
+  button {
+    background-color: #ff3816;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  
+  button:hover {
+    background-color: #ff0000;
+  }
+  
+  
+  #confirmacion, #resultado {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  
+  #resultado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  
+  .foto-personaje {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  
+  #nombre-personaje {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ff3816;
+  }
+  
+  
+  .oculto {
+    display: none;
+  }
+  .foto-personaje[src=""] {
+    display: none;
+  }
+  

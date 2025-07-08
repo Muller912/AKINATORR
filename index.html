@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Akinator Betel</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Contenedor principal: imagen genio + preguntas -->
+    <div class="container" id="contenedor-principal">
+      <img src="img/akinatorde.png" alt="Akinator" id="genio" />
+      <div class="pregunta-area">
+        <h2 id="pregunta">Cargando pregunta...</h2>
+        <div class="botones">
+          <button onclick="responder('Sí')">Sí</button>
+          <button onclick="responder('No')">No</button>
+          <button onclick="responder('Probablemente sí')">Probablemente sí</button>
+          <button onclick="responder('Probablemente no')">Probablemente no</button>
+          <button onclick="responder('No lo sé')">No lo sé</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Confirmación: pregunta especial -->
+    <div id="confirmacion" class="oculto">
+      <h2 id="confirmar-pregunta"></h2>
+      <div class="botones">
+        <button onclick="confirmarIdentidad(true)">Sí</button>
+        <button onclick="confirmarIdentidad(false)">No</button>
+      </div>
+    </div>
+
+
+    <!-- Resultado final -->
+    <div id="resultado" class="oculto">
+      <img class="foto-personaje" alt="Foto del personaje" src="" />
+      <h1 id="nombre-personaje"></h1>
+      <p id="detalle"></p>
+      <p id="mensaje-final" class="oculto" style="font-size: 24px; font-weight: bold; color: #ff3816;">Lo he adivinado</p>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
