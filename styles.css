@@ -28,7 +28,7 @@
   
   
   #genio {
-    height: 400px;
+    height: 600px;
   }
   
   
@@ -104,4 +104,4 @@
   .foto-personaje[src=""] {
     display: none;
   }
-  
+ 
