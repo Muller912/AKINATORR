@@ -857,7 +857,7 @@ const personajes = [
       alto: false
     },
     especial: "¿No?",
-    detalle: "No",
+    detalle: "Si",
     imagen: "img/eltontono.png"
   },
   
