@@ -18,7 +18,7 @@ const personajes = [
     },
     especial: "¿Le dicen 'El Zeide'?",
     detalle: "Le dicen 'El Zeide'",
-    imagen: "img/alex.png"
+    imagen: "img/Alex.png"
   },
   {
     nombre: "Cata",
@@ -39,7 +39,7 @@ const personajes = [
     },
     especial: "¿Es hincha de Chacarita?",
     detalle: "Es hincha de Chacarita",
-    imagen: "img/cata.png"
+    imagen: "img/Cata.png"
   },
   {
     nombre: "Paula",
@@ -60,7 +60,7 @@ const personajes = [
     },
     especial: "¿Va a BBYO?",
     detalle: "Va a BBYO",
-    imagen: "img/paula.png"
+    imagen: "img/Paula.png"
   },
   {
     nombre: "Maayan",
@@ -81,7 +81,7 @@ const personajes = [
     },
     especial: "¿Hace vlogs?",
     detalle: "Hace vlogs",
-    imagen: "img/maayan.png"
+    imagen: "img/Maayan.png"
   },
   {
     nombre: "Aby",
@@ -102,7 +102,7 @@ const personajes = [
     },
     especial: "¿Tiene un hermano dentro de Rochel?",
     detalle: "Tiene un hermano dentro de Rochel",
-    imagen: "img/aby.png"
+    imagen: "img/Aby.png"
   },
   {
     nombre: "Alma",
@@ -123,7 +123,7 @@ const personajes = [
     },
     especial: "¿Es colorada?",
     detalle: "Es colorada",
-    imagen: "img/alma.png"
+    imagen: "img/Alma.png"
   },
   {
     nombre: "Dan",
@@ -144,7 +144,7 @@ const personajes = [
     },
     especial: "¿Tiene un sticker que dice “🤘El Dan Abadi🤘”?",
     detalle: "Tiene un sticker que dice “🤘El Dan Abadi🤘”",
-    imagen: "img/dan.png"
+    imagen: "img/Dan.png"
   },
   {
     nombre: "Dani.K",
@@ -165,7 +165,7 @@ const personajes = [
     },
     especial: "¿Su hermano fue Rosh?",
     detalle: "Su hermano fue Rosh",
-    imagen: "img/danik.png"
+    imagen: "img/DaniK.jpg"
   },
   {
     nombre: "Ivan",
@@ -186,7 +186,7 @@ const personajes = [
     },
     especial: "¿Es celíaco?",
     detalle: "Es celíaco",
-    imagen: "img/ivan.png"
+    imagen: "img/Ivo.png"
   },
   {
     nombre: "Jaz",
@@ -207,7 +207,7 @@ const personajes = [
     },
     especial: "¿Vive en Nordelta?",
     detalle: "Vive en Nordelta",
-    imagen: "img/jaz.png"
+    imagen: "img/Jaz.jpg"
   },
   {
     nombre: "Juli",
@@ -228,7 +228,7 @@ const personajes = [
     },
     especial: "¿Es asmática?",
     detalle: "Es asmática",
-    imagen: "img/juli.png"
+    imagen: "img/Juli.jpg"
   },
   {
     nombre: "Lolo",
@@ -249,7 +249,7 @@ const personajes = [
     },
     especial: "¿Es de All Boys?",
     detalle: "Es de All Boys",
-    imagen: "img/lolo.png"
+    imagen: "img/Lolo.jpg"
   },
   {
     nombre: "Mateo",
@@ -270,7 +270,7 @@ const personajes = [
     },
     especial: "¿Toca el piano?",
     detalle: "Toca el piano",
-    imagen: "img/mateo.png"
+    imagen: "img/Mateo.png"
   },
   {
     nombre: "Khanis",
@@ -291,7 +291,7 @@ const personajes = [
     },
     especial: "¿Va a Obras?",
     detalle: "Va a Obras",
-    imagen: "img/khanis.png"
+    imagen: "img/Khanis.png"
   },
   {
     nombre: "Milo",
@@ -312,7 +312,7 @@ const personajes = [
     },
     especial: "¿Es el hermano de Roy?",
     detalle: "Es el hermano de Roy",
-    imagen: "img/milo.png"
+    imagen: "img/Milo.png"
   },
   {
     nombre: "Nacho",
@@ -333,7 +333,7 @@ const personajes = [
     },
     especial: "¿Es negro?",
     detalle: "Es negro",
-    imagen: "img/nacho.png"
+    imagen: "img/Nacho.png"
   },
   {
     nombre: "Rami",
@@ -354,7 +354,7 @@ const personajes = [
     },
     especial: "¿Su mamá es la presidenta de Bet-El?",
     detalle: "Su mamá es la presidenta de Bet-El",
-    imagen: "img/rami.png"
+    imagen: "img/Ramiro.png"
   },
   {
     nombre: "Schniper",
@@ -375,7 +375,7 @@ const personajes = [
     },
     especial: "¿Bajó mucho de grasa?",
     detalle: "Bajó mucho de grasa",
-    imagen: "img/schniper.png"
+    imagen: "img/Schniper.png"
   },
   {
     nombre: "Yair",
@@ -396,7 +396,7 @@ const personajes = [
     },
     especial: "¿Tiene una hermana en Rochel?",
     detalle: "Tiene una hermana en Rochel",
-    imagen: "img/yair.png"
+    imagen: "img/Yair.png"
   },
   {
     nombre: "Siano",
@@ -417,7 +417,7 @@ const personajes = [
     },
     especial: "¿Es comparado con un marciano?",
     detalle: "Es comparado con un marciano",
-    imagen: "img/siano.png"
+    imagen: "img/Siano.png"
   },
   {
     nombre: "Sophie",
@@ -438,28 +438,7 @@ const personajes = [
     },
     especial: "¿Su nombre es con PH?",
     detalle: "Su nombre es con PH",
-    imagen: "img/sophie.png"
-  },
-  {
-    nombre: "Tiago",
-    caracteristicas: {
-      madrij: false,
-      janij: true,
-      majanot: false,
-      iomSport: false,
-      peloNegro: false,
-      instrumento: false,
-      majanon: false,
-      hombre: true,
-      edma: false,
-      ort: false,
-      hermanosBetel: false,
-      deportes: false,
-      alto: false
-    },
-    especial: "¿Fue DT de los Babuinos?",
-    detalle: "Fue DT de los Babuinos",
-    imagen: "img/tiago.png"
+    imagen: "img/Sophie.png"
   },
   {
     nombre: "Wais",
@@ -480,7 +459,7 @@ const personajes = [
     },
     especial: "¿Juega al tenis?",
     detalle: "Juega al tenis",
-    imagen: "img/wais.png"
+    imagen: "img/Wais.jpg"
   },
   {
     nombre: "Toto",
@@ -501,7 +480,7 @@ const personajes = [
     },
     especial: "¿Hizo un curso de barbería?",
     detalle: "Hizo un curso de barbería",
-    imagen: "img/toto.png"
+    imagen: "img/Toto.png"
   },
   {
     nombre: "Uri",
@@ -522,7 +501,7 @@ const personajes = [
     },
     especial: "¿Su apodo es “El Escabuloso”?",
     detalle: "Su apodo es “El Escabuloso”",
-    imagen: "img/uri.png"
+    imagen: "img/Uri.png"
   },
   {
     nombre: "Widder",
@@ -543,7 +522,7 @@ const personajes = [
     },
     especial: "¿Es el capitán de los Babuinos?",
     detalle: "Es el capitán de los Babuinos",
-    imagen: "img/widder.png"
+    imagen: "img/Widder.png"
   },
   {
     nombre: "Wolko",
@@ -564,7 +543,7 @@ const personajes = [
     },
     especial: "¿Es subcampeón del Majane Freestyle Session?",
     detalle: "Es subcampeón del Majane Freestyle Session",
-    imagen: "img/wolko.png"
+    imagen: "img/Wolko.png"
   },
   {
     nombre: "Yoni",
@@ -585,7 +564,7 @@ const personajes = [
     },
     especial: "¿Hizo un curso de tipeo?",
     detalle: "Hizo un curso de tipeo",
-    imagen: "img/yoni.png"
+    imagen: "img/Yoni.png"
   },
   {
     nombre: "Benja",
@@ -606,7 +585,7 @@ const personajes = [
     },
     especial: "¿Sabe decir cosas machistas?",
     detalle: "Sabe decir cosas machistas",
-    imagen: "img/benja.png"
+    imagen: "img/Benja.png"
   },
   {
     nombre: "Dani.M",
@@ -648,7 +627,7 @@ const personajes = [
     },
     especial: "¿Comenzó a venir este año?",
     detalle: "Comenzó a venir este año",
-    imagen: "img/emma.png"
+    imagen: "img/Emma.png"
   },
   {
     nombre: "Espe",
@@ -669,7 +648,7 @@ const personajes = [
     },
     especial: "¿No fue a primaria Bet-El?",
     detalle: "No fue a primaria Bet-El",
-    imagen: "img/espe.png"
+    imagen: "img/Espe.png"
   },
   {
     nombre: "Sofi K",
@@ -690,7 +669,7 @@ const personajes = [
     },
     especial: "¿Su apellido comienza con la letra K?",
     detalle: "Su apellido comienza con la letra K",
-    imagen: "img/sofik.png"
+    imagen: "img/Sofik.png"
   },
   {
     nombre: "Ari",
@@ -711,7 +690,7 @@ const personajes = [
     },
     especial: "¿Vive en La Plata?",
     detalle: "Vive en La Plata",
-    imagen: "img/ari.png"
+    imagen: "img/Ari.png"
   },
   {
     nombre: "Tali",
@@ -732,7 +711,7 @@ const personajes = [
     },
     especial: "¿Va a Buber?",
     detalle: "Va a Buber",
-    imagen: "img/tali.png"
+    imagen: "img/Tali.png"
   },
   {
     nombre: "Vicky",
@@ -753,7 +732,7 @@ const personajes = [
     },
     especial: "¿Va Di Tella?",
     detalle: "Va a Di Tella",
-    imagen: "img/vicky.png"
+    imagen: "img/Vicky.png"
   },
   {
     nombre: "Iara.f",
@@ -774,7 +753,7 @@ const personajes = [
     },
     especial: "¿Vive en la plata?",
     detalle: "Es madrija y vive en la plata",
-    imagen: "img/iaraf.png"
+    imagen: "img/IaraF.png"
   },
   {
     nombre: "Diego",
@@ -795,7 +774,7 @@ const personajes = [
     },
     especial: "¿Es el hermano de batata?",
     detalle: "Es el hermano de batata",
-    imagen: "img/diego.png"
+    imagen: "img/Diego.png"
   },
   {
     nombre: "Rossman",
@@ -816,7 +795,7 @@ const personajes = [
     },
     especial: "¿Es el hermano de Axel?",
     detalle: "Es el hermano de Axel",
-    imagen: "img/rossman.png"
+    imagen: "img/Rossman.png"
   },
   {
     nombre: "El tonto que dice todo SI",
