@@ -345,7 +345,7 @@ const personajes = [
       peloNegro: false,
       instrumento: false,
       majanon: true,
-      hombre: false,
+      hombre: true,
       edma: true,
       ort: true,
       hermanosBetel: true,
@@ -712,6 +712,27 @@ const personajes = [
     especial: "¿Va a Buber?",
     detalle: "Va a Buber",
     imagen: "img/Tali.png"
+  },
+   {
+    nombre: "Sharon",
+    caracteristicas: {
+      madrij: false,
+      janij: true,
+      majanot: false,
+      iomSport: false,
+      peloNegro: false,
+      instrumento: false,
+      majanon: true,
+      hombre: false,
+      edma: true,
+      ort: false,
+      hermanosBetel: true,
+      deportes: false,
+      alto: false
+    },
+    especial: "¿Fue a 7mo C?",
+    detalle: "Fue a 7mo C",
+    imagen: "img/Sharon.jpg"
   },
   {
     nombre: "Vicky",
