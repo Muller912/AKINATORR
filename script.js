@@ -730,7 +730,7 @@ const personajes = [
       deportes: true,
       alto: false
     },
-    especial: "¿Va Di Tella?",
+    especial: "¿Va a Di Tella?",
     detalle: "Va a Di Tella",
     imagen: "img/Vicky.png"
   },
