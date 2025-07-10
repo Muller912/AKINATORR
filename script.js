@@ -90,7 +90,7 @@ const personajes = [
       janij: true,
       majanot: true,
       iomSport: true,
-      peloNegro: false,
+      peloNegro: true,
       instrumento: false,
       majanon: true,
       hombre: false,
@@ -200,7 +200,7 @@ const personajes = [
       majanon: true,
       hombre: false,
       edma: true,
-      ort: true,
+      ort: false ,
       hermanosBetel: true,
       deportes: true,
       alto: false
