@@ -950,6 +950,7 @@ const personajes = [
   
   
     if (confirmado) {
+      document.getElementById("reiniciar-btn").classList.remove("oculto");
       nombreElem.innerText = personajeFinal.nombre;
       detalleElem.innerText = personajeFinal.detalle;
       imagenElem.src = personajeFinal.imagen;
@@ -965,6 +966,7 @@ const personajes = [
 
     } else {
       nombreElem.innerText = "¡Ups! Me equivoqué.";
+      document.getElementById("reiniciar-btn").classList.remove("oculto");
       detalleElem.innerText = "Intentá de nuevo o revisá las respuestas.";
       imagenElem.src = "";
       imagenElem.alt = "";
@@ -1013,4 +1015,27 @@ const personajes = [
   }
   
   cargarInventario();
+  function reiniciarJuego() {
+    respuestas = {};
+    preguntaActual = 0;
+    candidatos = [...personajes];
+    personajeFinal = null;
+  
+    // Ocultar secciones
+    document.getElementById("resultado").classList.add("oculto");
+    document.getElementById("reiniciar-btn").classList.add("oculto");
+    document.getElementById("mensaje-final").classList.add("oculto");
+    document.getElementById("confirmacion").classList.add("oculto");
+  
+    // Limpiar datos anteriores del personaje adivinado
+    document.getElementById("nombre-personaje").innerText = "";
+    document.getElementById("detalle").innerText = "";
+    const img = document.querySelector(".foto-personaje");
+    img.src = "";
+    img.alt = "";
+  
+    // Mostrar siguiente pregunta
+    mostrarPregunta();
+  }
+  
   
