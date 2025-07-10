@@ -944,37 +944,35 @@ const personajes = [
     const detalleElem = document.getElementById("detalle");
     const imagenElem = document.querySelector(".foto-personaje");
     const mensajeFinal = document.getElementById("mensaje-final");
-  
+    const reiniciarBtn = document.getElementById("reiniciar-btn");
   
     document.getElementById("confirmacion").classList.add("oculto");
   
-  
     if (confirmado) {
-      document.getElementById("reiniciar-btn").classList.remove("oculto");
       nombreElem.innerText = personajeFinal.nombre;
       detalleElem.innerText = personajeFinal.detalle;
       imagenElem.src = personajeFinal.imagen;
       imagenElem.alt = personajeFinal.nombre;
       mensajeFinal.classList.remove("oculto");
-
+  
+      // 👉 Agregar al inventario si no está
       if (!inventario.includes(personajeFinal.nombre)) {
         inventario.push(personajeFinal.nombre);
         localStorage.setItem("inventarioAdivinados", JSON.stringify(inventario));
         agregarAFiguritas(personajeFinal);
+        actualizarProgreso(); // 👉 Actualizar barra
       }
-      
-
+  
     } else {
       nombreElem.innerText = "¡Ups! Me equivoqué.";
-      document.getElementById("reiniciar-btn").classList.remove("oculto");
       detalleElem.innerText = "Intentá de nuevo o revisá las respuestas.";
       imagenElem.src = "";
       imagenElem.alt = "";
       mensajeFinal.classList.add("oculto");
     }
   
-  
     resultado.classList.remove("oculto");
+    reiniciarBtn.classList.remove("oculto"); // 👉 Mostrar botón de reinicio
   }
   
   
@@ -1039,3 +1037,13 @@ const personajes = [
   }
   
   
+  function actualizarProgreso() {
+    const total = personajes.length;
+    const encontrados = inventario.length;
+    const porcentaje = Math.round((encontrados / total) * 100);
+  
+    document.getElementById("progreso-texto").innerText = `${encontrados} / ${total} personajes encontrados`;
+    document.getElementById("progreso-completo").style.width = `${porcentaje}%`;
+  }
+ 
+actualizarProgreso();
