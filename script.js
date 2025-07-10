@@ -888,6 +888,8 @@ const personajes = [
   let candidatos = [...personajes];
   let personajeFinal = null;
   
+  let inventario = JSON.parse(localStorage.getItem("inventarioAdivinados")) || [];
+
   
   function mostrarPregunta() {
     // Ocultar resultado y confirmacion al mostrar preguntas
@@ -953,6 +955,14 @@ const personajes = [
       imagenElem.src = personajeFinal.imagen;
       imagenElem.alt = personajeFinal.nombre;
       mensajeFinal.classList.remove("oculto");
+
+      if (!inventario.includes(personajeFinal.nombre)) {
+        inventario.push(personajeFinal.nombre);
+        localStorage.setItem("inventarioAdivinados", JSON.stringify(inventario));
+        agregarAFiguritas(personajeFinal);
+      }
+      
+
     } else {
       nombreElem.innerText = "¡Ups! Me equivoqué.";
       detalleElem.innerText = "Intentá de nuevo o revisá las respuestas.";
@@ -967,4 +977,40 @@ const personajes = [
   
   
   mostrarPregunta();
+  
+  function agregarAFiguritas(personaje) {
+    const album = document.getElementById("album");
+  
+    const contenedor = document.createElement("div");
+    contenedor.classList.add("figu");
+  
+    const img = document.createElement("img");
+    img.src = personaje.imagen;
+    img.alt = personaje.nombre;
+  
+    const nombre = document.createElement("div");
+    nombre.classList.add("nombre-personaje");
+    nombre.innerText = personaje.nombre;
+  
+    const wrapper = document.createElement("div");
+    wrapper.classList.add("figu-contenido");
+    wrapper.appendChild(img);
+    wrapper.appendChild(nombre);
+  
+    contenedor.appendChild(wrapper);
+    album.appendChild(contenedor);
+  }
+  
+
+  
+  function cargarInventario() {
+    inventario.forEach(nombre => {
+      const personaje = personajes.find(p => p.nombre === nombre);
+      if (personaje) {
+        agregarAFiguritas(personaje);
+      }
+    });
+  }
+  
+  cargarInventario();
   
