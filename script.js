@@ -615,7 +615,7 @@ const personajes = [
       janij: true,
       majanot: false,
       iomSport: false,
-      peloNegro: true,
+      peloNegro: false,
       instrumento: false,
       majanon: false,
       hombre: false,
