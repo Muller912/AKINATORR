@@ -628,7 +628,7 @@ const personajes = [
     },
     especial: "¿Comenzó a venir este año?",
     detalle: "Comenzó a venir este año",
-    imagen: "img/Emma.png"
+    imagen: "img/Emma.jpg"
   },
   {
     nombre: "Espe",
