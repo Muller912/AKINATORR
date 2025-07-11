@@ -1,3 +1,4 @@
+
 const personajes = [
   {
     nombre: "Alex",
@@ -200,7 +201,7 @@ const personajes = [
       majanon: true,
       hombre: false,
       edma: true,
-      ort: false ,
+      ort: false,
       hermanosBetel: true,
       deportes: true,
       alto: false
@@ -887,29 +888,65 @@ const personajes = [
   let preguntaActual = 0;
   let candidatos = [...personajes];
   let personajeFinal = null;
-  
   let inventario = JSON.parse(localStorage.getItem("inventarioAdivinados")) || [];
-
+  let resolviendoDoble = false;
+  let personajesDoble = [];
+  
   
   function mostrarPregunta() {
-    // Ocultar resultado y confirmacion al mostrar preguntas
     document.getElementById("resultado").classList.add("oculto");
     document.getElementById("confirmacion").classList.add("oculto");
     document.getElementById("mensaje-final").classList.add("oculto");
-    // Mostrar contenedor principal
     document.getElementById("contenedor-principal").style.display = "flex";
   
-  
-    if (preguntaActual >= preguntas.length || candidatos.length === 1) {
+    if (preguntaActual >= preguntas.length || candidatos.length <= 2) {
+      if (candidatos.length === 2) {
+        // Si quedan 2, y no estamos ya en la pregunta especial:
+        if (!resolviendoDoble) {
+          personajesDoble = [...candidatos]; // Guardamos los 2
+          const p1 = personajesDoble[0];
+          const preguntaEspecial = p1.especial;
+          document.getElementById("pregunta").innerText = preguntaEspecial;
+          resolviendoDoble = true;
+          return;
+        }
+      }
       verificarFinal();
       return;
     }
+  
     const pregunta = preguntas[preguntaActual];
     document.getElementById("pregunta").innerText = pregunta.texto;
   }
   
   
+  
   function responder(respuesta) {
+    // Si estamos en el caso especial de dos candidatos y pregunta especial
+    if (resolviendoDoble && personajesDoble.length === 2) {
+      const p1 = personajesDoble[0];
+      const p2 = personajesDoble[1];
+  
+      if (respuesta === "No sé") {
+        personajeFinal = null;
+        document.getElementById("pregunta").innerText = "No puedo adivinar si no respondés 😅";
+        return;
+      }
+  
+      const valor = respuesta === "Sí" || respuesta === "Probablemente sí";
+      personajeFinal = valor ? p1 : p2;
+      mostrarConfirmacion();
+      return;
+    }
+  
+    // Si la respuesta es "No sé", avanzamos sin filtrar candidatos
+    if (respuesta === "No sé") {
+      preguntaActual++;
+      mostrarPregunta();
+      return;
+    }
+  
+    // Si la respuesta es Sí o Probablemente sí
     const clave = preguntas[preguntaActual].clave;
     const valor = respuesta === "Sí" || respuesta === "Probablemente sí";
     respuestas[clave] = valor;
@@ -917,6 +954,8 @@ const personajes = [
     preguntaActual++;
     mostrarPregunta();
   }
+  
+  
   
   
   function verificarFinal() {
@@ -992,14 +1031,20 @@ const personajes = [
     nombre.classList.add("nombre-personaje");
     nombre.innerText = personaje.nombre;
   
+    const caracteristica = document.createElement("div");
+    caracteristica.classList.add("caracteristica-personaje");
+    caracteristica.innerText = personaje.especial;
+  
     const wrapper = document.createElement("div");
     wrapper.classList.add("figu-contenido");
     wrapper.appendChild(img);
     wrapper.appendChild(nombre);
+    wrapper.appendChild(caracteristica);
   
     contenedor.appendChild(wrapper);
     album.appendChild(contenedor);
   }
+  
   
 
   
