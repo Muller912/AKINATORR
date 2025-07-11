@@ -1064,6 +1064,10 @@ const personajes = [
     candidatos = [...personajes];
     personajeFinal = null;
   
+    // REINICIAR EL ESTADO DE LA PREGUNTA ESPECIAL DE DOS PERSONAS
+    resolviendoDoble = false;
+    personajesDoble = [];
+  
     // Ocultar secciones
     document.getElementById("resultado").classList.add("oculto");
     document.getElementById("reiniciar-btn").classList.add("oculto");
@@ -1080,6 +1084,7 @@ const personajes = [
     // Mostrar siguiente pregunta
     mostrarPregunta();
   }
+  
   
   
   function actualizarProgreso() {
