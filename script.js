@@ -622,7 +622,7 @@ const personajes = [
       hombre: false,
       edma: true,
       ort: true,
-      hermanosBetel: false,
+      hermanosBetel: true,
       deportes: false,
       alto: false
     },
