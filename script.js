@@ -1018,32 +1018,25 @@ const personajes = [
   mostrarPregunta();
   
   function agregarAFiguritas(personaje) {
-    const album = document.getElementById("album");
-  
-    const contenedor = document.createElement("div");
-    contenedor.classList.add("figu");
-  
-    const img = document.createElement("img");
-    img.src = personaje.imagen;
-    img.alt = personaje.nombre;
-  
-    const nombre = document.createElement("div");
-    nombre.classList.add("nombre-personaje");
-    nombre.innerText = personaje.nombre;
-  
-    const caracteristica = document.createElement("div");
-    caracteristica.classList.add("caracteristica-personaje");
-    caracteristica.innerText = personaje.especial;
-  
-    const wrapper = document.createElement("div");
-    wrapper.classList.add("figu-contenido");
-    wrapper.appendChild(img);
-    wrapper.appendChild(nombre);
-    wrapper.appendChild(caracteristica);
-  
-    contenedor.appendChild(wrapper);
-    album.appendChild(contenedor);
-  }
+  const album = document.getElementById("album");
+
+  const contenedor = document.createElement("div");
+  contenedor.classList.add("figu");
+
+  const img = document.createElement("img");
+  img.src = personaje.imagen;
+  img.alt = personaje.nombre;
+
+  const nombre = document.createElement("div");
+  nombre.classList.add("nombre-personaje");
+  nombre.innerText = personaje.nombre;
+
+  contenedor.appendChild(img);
+  contenedor.appendChild(nombre);
+
+  album.appendChild(contenedor);
+}
+
   
   
 
