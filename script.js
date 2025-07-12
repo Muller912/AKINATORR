@@ -285,7 +285,7 @@ const personajes = [
       majanon: true,
       hombre: true,
       edma: true,
-      ort: true,
+      ort: false,
       hermanosBetel: true,
       deportes: false,
       alto: false
@@ -509,7 +509,7 @@ const personajes = [
     caracteristicas: {
       madrij: false,
       janij: true,
-      majanot: true,
+      majanot: false,
       iomSport: true,
       peloNegro: true,
       instrumento: true,
